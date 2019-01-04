@@ -30,7 +30,7 @@ namespace SolverTests
             points.Add( new LightPoint {xPosition=-11, yPosition=-22, xVelocity=3, yVelocity=4});
             _grid.LoadPoints(points);
 
-            _grid.Iterate();
+            _grid.Iterate(Direction.forward);
 
             var boundingRect = _grid.BoundingRect;
 

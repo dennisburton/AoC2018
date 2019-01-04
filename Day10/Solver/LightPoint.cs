@@ -7,9 +7,14 @@ namespace Solver
         public int xVelocity { get; set; }
         public int yVelocity { get; set; }
 
-        public void Iterate() {
-            xPosition += xVelocity;
-            yPosition += yVelocity;
+        public void Iterate(Direction direction) {
+            if( direction == Direction.forward ){
+                xPosition += xVelocity;
+                yPosition += yVelocity;
+            } else {
+                xPosition -= xVelocity;
+                yPosition -= yVelocity;
+            }
         }
     }
 }
