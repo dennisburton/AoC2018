@@ -1,0 +1,11 @@
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.csprojAssemblyReference.cache
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.csproj.CoreCompileInputs.cache
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.AssemblyInfoInputs.cache
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.AssemblyInfo.cs
+C:\dev\aoc\Day06\bin\Debug\netcoreapp2.1\Day06.deps.json
+C:\dev\aoc\Day06\bin\Debug\netcoreapp2.1\Day06.runtimeconfig.json
+C:\dev\aoc\Day06\bin\Debug\netcoreapp2.1\Day06.runtimeconfig.dev.json
+C:\dev\aoc\Day06\bin\Debug\netcoreapp2.1\Day06.dll
+C:\dev\aoc\Day06\bin\Debug\netcoreapp2.1\Day06.pdb
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.dll
+C:\dev\aoc\Day06\obj\Debug\netcoreapp2.1\Day06.pdb

@@ -1,0 +1,9 @@
+C:\dev\aoc\Day10\Solver\bin\Debug\netstandard2.0\Solver.deps.json
+C:\dev\aoc\Day10\Solver\bin\Debug\netstandard2.0\Solver.dll
+C:\dev\aoc\Day10\Solver\bin\Debug\netstandard2.0\Solver.pdb
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.csprojAssemblyReference.cache
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.csproj.CoreCompileInputs.cache
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.AssemblyInfoInputs.cache
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.AssemblyInfo.cs
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.dll
+C:\dev\aoc\Day10\Solver\obj\Debug\netstandard2.0\Solver.pdb

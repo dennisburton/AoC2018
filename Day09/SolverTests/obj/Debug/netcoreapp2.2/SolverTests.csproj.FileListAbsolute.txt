@@ -1,0 +1,17 @@
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\SolverTests.deps.json
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\SolverTests.runtimeconfig.json
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\SolverTests.runtimeconfig.dev.json
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\SolverTests.dll
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\SolverTests.pdb
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\Solver.dll
+c:\dev\aoc\Day09\SolverTests\bin\Debug\netcoreapp2.2\Solver.pdb
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.csprojAssemblyReference.cache
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.csproj.CoreCompileInputs.cache
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.AssemblyInfoInputs.cache
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.AssemblyInfo.cs
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.csproj.CopyComplete
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.dll
+c:\dev\aoc\Day09\SolverTests\obj\Debug\netcoreapp2.2\SolverTests.pdb

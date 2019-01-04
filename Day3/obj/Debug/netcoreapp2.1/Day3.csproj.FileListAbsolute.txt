@@ -1,0 +1,11 @@
+C:\dev\aoc\Day3\bin\Debug\netcoreapp2.1\Day3.deps.json
+C:\dev\aoc\Day3\bin\Debug\netcoreapp2.1\Day3.runtimeconfig.json
+C:\dev\aoc\Day3\bin\Debug\netcoreapp2.1\Day3.runtimeconfig.dev.json
+C:\dev\aoc\Day3\bin\Debug\netcoreapp2.1\Day3.dll
+C:\dev\aoc\Day3\bin\Debug\netcoreapp2.1\Day3.pdb
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.csprojAssemblyReference.cache
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.csproj.CoreCompileInputs.cache
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.AssemblyInfoInputs.cache
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.AssemblyInfo.cs
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.dll
+C:\dev\aoc\Day3\obj\Debug\netcoreapp2.1\Day3.pdb
