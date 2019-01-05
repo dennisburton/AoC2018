@@ -4,11 +4,11 @@ using Xunit;
 
 namespace SolverTests
 {
-    public class FuelCellTests
+    public class CalculationTests
     {
-        public FuelCellTests(){
+        public CalculationTests(){
             _grid = new Grid { SerialNumber = 8 };
-            _calculator = new PowerCalculator( _grid );
+            _calculator = new PowerCalculator( );
             _cell = new FuelCell { X = 3, Y = 5 };
         }
         private Grid _grid;
@@ -43,7 +43,7 @@ namespace SolverTests
         //Adding the serial number produces 65 + 8 = 73.
         [Fact]
         public void Step2Calculations(){
-            var step2 = _calculator.Step2( expectedStep1,  _cell );
+            var step2 = _calculator.Step2( expectedStep1, _grid.SerialNumber,  _cell );
 
             Assert.Equal( expectedStep2, step2 );
         }
@@ -77,7 +77,7 @@ namespace SolverTests
         //Subtracting 5 produces 9 - 5 = 4.
         [Fact]
         public void CalculatePower(){
-            var power = _calculator.PowerLevel( _cell );
+            var power = _calculator.PowerLevel( _grid.SerialNumber, _cell );
             Assert.Equal( expectedStep5, power );
         }
 

@@ -1,15 +1,10 @@
 namespace Solver
 {
     public class PowerCalculator {
-        public PowerCalculator( Grid grid ){
-            _grid = grid;
-        }
-        private Grid _grid;
-
-        public int PowerLevel( FuelCell cell ){
+        public int PowerLevel( int SerialNumber, FuelCell cell ){
             var rackId = RackId( cell );
             var step1 = Step1( rackId, cell );
-            var step2 = Step2( step1, cell );
+            var step2 = Step2( step1, SerialNumber, cell );
             var step3 = Step3( step2, rackId );
             var step4 = Step4( step3 );
             var power = Step5( step4 );
@@ -28,8 +23,8 @@ namespace Solver
         }
 
         // Step2 - Increase the power level by the value of the grid serial number (your puzzle input).
-        public int Step2( int step1, FuelCell cell ){
-            return step1 + _grid.SerialNumber;
+        public int Step2( int step1, int serialNumber, FuelCell cell ){
+            return step1 + serialNumber;
         }
         
         // Step3 - Set the power level to itself multiplied by the rack ID.
