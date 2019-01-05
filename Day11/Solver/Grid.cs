@@ -1,5 +1,6 @@
 namespace Solver
 {
+
     public class Grid {
         public int SerialNumber { get; set; }
 
@@ -21,9 +22,10 @@ namespace Solver
             }
         }
 
-        public FuelCell highest {get;set;}
-        public int HighestPowerCube(int gridSize) {
-            var highestTotalPower = 0;
+        public PowerResult HighestPowerCube(int gridSize) {
+            var highestTotalPower = int.MinValue;
+            FuelCell highestCell = null;
+
             for(int rowIndex=0; rowIndex<_size -(gridSize-1); rowIndex++){
                 for(int columnIndex=0; columnIndex<_size - (gridSize-1); columnIndex++){
                     var currentTotalPower = 0;
@@ -35,13 +37,27 @@ namespace Solver
                     }
                     if( highestTotalPower < currentTotalPower){
                         highestTotalPower = currentTotalPower;
-                        highest = Cells[rowIndex,columnIndex];
+                        highestCell = Cells[rowIndex,columnIndex];
                     }
                 }
             }
 
-            return highestTotalPower;
+            return new PowerResult{Cell=highestCell, TotalPower=highestTotalPower};
         }
+
+        public (PowerResult result, int cubeSize) HighestPowerCubeAnySize(){
+            int highestCubeSize = 0;
+            PowerResult highestResult = null;
+            for(int cubeSize=1; cubeSize<_size; cubeSize++){
+                var result = HighestPowerCube(cubeSize);
+                if( highestResult == null || result.TotalPower > highestResult.TotalPower ){
+                    highestResult = result;
+                    highestCubeSize = cubeSize;
+                }
+            }
+
+            return (highestResult, highestCubeSize);
+        } 
 
         public void Log(){
             for(int rowIndex=0; rowIndex<_size; rowIndex++){

@@ -15,9 +15,9 @@ namespace Runner
             grid.SerialNumber = serialNumber;
             grid.Initialize( size, calculator );
 
-            var power = grid.HighestPowerCube(3);
+            var highestResultAny = grid.HighestPowerCubeAnySize();
 
-            System.Console.WriteLine($"Result: X:{grid.highest.X} Y:{grid.highest.Y} power: {power}");
+            System.Console.WriteLine($"Result: X:{highestResultAny.result.Cell.X} Y:{highestResultAny.result.Cell.Y} power: {highestResultAny.result.TotalPower} size: {highestResultAny.cubeSize}");
 
         }
     }

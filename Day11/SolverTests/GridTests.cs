@@ -36,12 +36,32 @@ namespace SolverTests
             grid.SerialNumber = serialNumber;
             grid.Initialize( size, calculator );
 
-            var highestPower = grid.HighestPowerCube(3);
+            var highestResult = grid.HighestPowerCube(3);
 
-            Assert.Equal( expectedPower, highestPower);
-            Assert.Equal( expectedX, grid.highest.X );
-            Assert.Equal( expectedY, grid.highest.Y );
+            Assert.Equal( expectedPower, highestResult.TotalPower);
+            Assert.Equal( expectedX, highestResult.Cell.X );
+            Assert.Equal( expectedY, highestResult.Cell.Y );
         }
+
+        [Theory]
+        [InlineData(18, 90, 269, 113, 16)]
+        //[InlineData(42, 232, 251, 119, 12)]
+        public void PowerSpotChecksAnySize( int serialNumber, int expectedX, int expectedY, int expectedPower, int expectedCubeSize ){
+            const int size=300;
+            var calculator = new PowerCalculator();
+            
+            var grid = new Grid();
+            grid.SerialNumber = serialNumber;
+            grid.Initialize( size, calculator );
+
+            var highestResult = grid.HighestPowerCubeAnySize();
+
+            Assert.Equal( expectedPower, highestResult.result.TotalPower);
+            Assert.Equal( expectedX, highestResult.result.Cell.X );
+            Assert.Equal( expectedY, highestResult.result.Cell.Y );
+            Assert.Equal( expectedCubeSize, highestResult.cubeSize );
+        }
+
 
     }
 }
