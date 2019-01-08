@@ -38,5 +38,27 @@ namespace SolverTests
 
             Assert.Equal( expectedInitialState, result );
         }
+
+        [Theory]
+        [InlineData("...## => #", "...##", '#')]
+        [InlineData("..#.. => #", "..#..", '#')]
+        [InlineData(".#... => #", ".#...", '#')]
+        [InlineData(".#.#. => #", ".#.#.", '#')]
+        [InlineData(".#.## => #", ".#.##", '#')]
+        [InlineData(".##.. => #", ".##..", '#')]
+        [InlineData(".#### => #", ".####", '#')]
+        [InlineData("#.#.# => #", "#.#.#", '#')]
+        [InlineData("#.### => #", "#.###", '#')]
+        [InlineData("##.#. => #", "##.#.", '#')]
+        [InlineData("##.## => #", "##.##", '#')]
+        [InlineData("###.. => #", "###..", '#')]
+        [InlineData("###.# => #", "###.#", '#')]
+        [InlineData("####. => #", "####.", '#')]
+        public void ProcessRuleProcessing( string ruleDescription, string expectedSpecifier, char expectedResult ){
+            var result = _loader.ProcessRule( ruleDescription );
+
+            Assert.Equal( expectedSpecifier, result.Specifier );
+            Assert.Equal( expectedResult, result.Result );
+        }
     }
 }

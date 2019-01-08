@@ -1,4 +1,5 @@
 ﻿using System;
+using Solver;
 
 namespace Runner
 {
@@ -6,7 +7,13 @@ namespace Runner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            const string fileName = "SolverTests/dataSample.txt";
+            var loader = new DataLoader();
+
+            var puzzleDescription = loader.LoadData( fileName );
+
+            System.Console.WriteLine( $" program initial state {puzzleDescription.InitialState}");
+            System.Console.WriteLine( $" rules {puzzleDescription.RuleDescriptions.Count}");
         }
     }
 }
