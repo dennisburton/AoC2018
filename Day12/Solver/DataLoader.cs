@@ -13,7 +13,7 @@ namespace Solver
 
         public PuzzleDescription LoadData( string fileName ){
 
-            //if( !FileExists( fileName ) ) throw new ArgumentException($"File ${fileName} not found");
+            if( !FileExists( fileName ) ) throw new ArgumentException($"File ${fileName} not found");
             var nextState = DataLoaderState.InitialState;
 
             var description = new PuzzleDescription();
