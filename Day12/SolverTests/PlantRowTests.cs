@@ -39,10 +39,11 @@ namespace SolverTests
         // A note like .##.# => # means that a pot has a plant in a given generation if, in the previous generation, 
         // there were plants in that pot, the one immediately to the left, and the one two pots to the right, but not in the ones immediately to the right and two to the left.
         [Theory]
-        [InlineData(2,"..#..",'.','.', true)]
-        [InlineData(7,"##.##",'.','.', false)]
-        [InlineData(12,".##.#",'#','#', false)]
-        [InlineData(2,".##.#",'.','#', false)]
+        // [InlineData(2,"..#..",'.','.', true)]
+        // [InlineData(7,"##.##",'.','.', false)]
+        // [InlineData(12,".##.#",'#','#', false)]
+        // [InlineData(2,".##.#",'.','#', false)]
+        [InlineData(0,"....#",'#','#', true)]
         public void RuleProcessing(int startingIndex, string ruleSpecifier, char ruleResult, char expectedResult, bool expectedHasChanged){
             _plantRow.CurrentPlantIndex = startingIndex;
             var ruleDescription = new RuleDescription{Result=ruleResult, Specifier=ruleSpecifier };

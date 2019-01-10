@@ -14,7 +14,13 @@ namespace Solver
             var currentPlant = Plants[CurrentPlantIndex];
             var ruleResult = new RuleResult { HasChanged=false, Result = currentPlant };
 
-            var testPlants = Plants.Substring(CurrentPlantIndex-2, 5);
+            var startingIndex = CurrentPlantIndex - 2;
+            string testPlants; 
+            if( startingIndex < 0 ){
+                testPlants = $"..{Plants.Substring(CurrentPlantIndex, 3)}";
+            } else {
+                testPlants = Plants.Substring(CurrentPlantIndex-2, 5);
+            }
 
             var ruleMatches = (testPlants == ruleDescription.Specifier);
             if( ruleMatches && currentPlant != ruleDescription.Result )
