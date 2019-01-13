@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Solver;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace SolverTests
 {
@@ -8,6 +9,7 @@ namespace SolverTests
         // testing rules
         // 
         private PlantRow _plantRow;
+        ITestOutputHelper _logger;
 
 
         // setup rules with:
@@ -16,8 +18,8 @@ namespace SolverTests
         //.##.# => #
         // setup row of plants as:
         // ..#..##.##.##.# in order to have the rules available with different offsets in the row
-        public PlantRowTests() {
-
+        public PlantRowTests( ITestOutputHelper logger ) {
+            _logger = logger;
             _plantRow = new PlantRow();
 
             var rules = new List<RuleDescription> {
@@ -53,6 +55,28 @@ namespace SolverTests
 
             Assert.Equal( expectedHasChanged, result.HasChanged );
             Assert.Equal( expectedResult, result.Result );
+        }
+
+        [Theory]
+        [InlineData(2, "..#..","")]
+        [InlineData(1, "...#.","")]
+        [InlineData(0, "....#","")]
+        [InlineData(2, "#####","###########")]
+        [InlineData(1, ".####","###########")]
+        [InlineData(0, "..###","###########")]
+        [InlineData(12, ".##.#","")]
+        [InlineData(13, "##.#.","")]
+        [InlineData(14, "#.#..","")]
+        public void CurrentPlantContext(int startingIndex, string expectedPlantContext, string plantOverride){
+            if( !string.IsNullOrEmpty(plantOverride) ) _plantRow.Plants = plantOverride;
+
+
+            _plantRow.CurrentPlantIndex = startingIndex;
+            var actualPlantContext = _plantRow.PlantContext( );
+
+            _logger.WriteLine($"offset: {startingIndex}  expected:{expectedPlantContext} actual:{actualPlantContext}");
+
+            Assert.Equal( expectedPlantContext, actualPlantContext );
         }
 
 
